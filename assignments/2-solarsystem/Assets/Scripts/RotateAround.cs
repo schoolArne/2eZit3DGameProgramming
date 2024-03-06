@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Threading;
 using UnityEngine;
 
 public class RotateAround : MonoBehaviour
 {
+
     public Transform target;
     public int speed;
 
@@ -14,10 +13,10 @@ public class RotateAround : MonoBehaviour
         if (target == null)
         {
             target = this.gameObject.transform;
+
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.RotateAround(target.transform.position, target.transform.up, speed * Time.deltaTime);
