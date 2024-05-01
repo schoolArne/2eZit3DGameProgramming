@@ -20,7 +20,6 @@ public class CameraFollowScript : MonoBehaviour
     {
         target = newTarget;
     }
-
     private void LateUpdate()
     {
         if (target != null)
