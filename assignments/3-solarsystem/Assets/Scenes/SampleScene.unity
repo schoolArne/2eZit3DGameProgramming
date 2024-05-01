@@ -528,7 +528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothSpeed: 0.125
-  distanceFromSphere: 100
+  distanceFromSphere: 1.5
 --- !u!1 &997013279
 GameObject:
   m_ObjectHideFlags: 0
