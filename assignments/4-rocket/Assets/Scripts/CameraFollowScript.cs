@@ -10,7 +10,7 @@ public class CameraFollowScript : MonoBehaviour
         transform.position = new Vector3(
             objectToFollow.transform.position.x,
             objectToFollow.transform.position.y,
-            objectToFollow.transform.position.z + 3
+            objectToFollow.transform.position.z - 10
         );
     }
 }
