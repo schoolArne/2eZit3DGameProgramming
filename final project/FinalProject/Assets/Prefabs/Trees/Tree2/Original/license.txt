@@ -1,0 +1,11 @@
+Model Information:
+* title:	old tree
+* source:	https://sketchfab.com/3d-models/old-tree-9c9dda93e3f645a2aeb259f34d443de0
+* author:	PremModel (https://sketchfab.com/PremModel)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "old tree" (https://sketchfab.com/3d-models/old-tree-9c9dda93e3f645a2aeb259f34d443de0) by PremModel (https://sketchfab.com/PremModel) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
