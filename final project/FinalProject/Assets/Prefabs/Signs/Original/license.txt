@@ -1,0 +1,8 @@
+Model Information:
+* title:	Low-Poly Wooden Sign made of Three Planks
+* source:	https://sketchfab.com/3d-models/low-poly-wooden-sign-made-of-three-planks-12b45a9419734d3e9277564f770f264e
+* author:	JeffK (https://sketchfab.com/jeffkolada)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
