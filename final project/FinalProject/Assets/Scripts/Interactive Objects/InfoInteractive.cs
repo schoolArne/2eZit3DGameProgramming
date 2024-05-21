@@ -17,7 +17,7 @@ public class InfoInteractable : MonoBehaviour
     {
         if(CurrentlyShowingMessage)
         {
-            if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape)
+            if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
             {
                 textElement.text = "";
                 CurrentlyShowingMessage = false;
