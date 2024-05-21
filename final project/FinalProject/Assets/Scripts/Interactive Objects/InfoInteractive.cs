@@ -7,6 +7,7 @@ public class InfoInteractable : MonoBehaviour
 {
     private bool CurrentlyShowingMessage = false;
     public TMP_Text textElement;
+    [TextArea(3, 20)]
     public string message = "";
     public void OnInteract()
     {

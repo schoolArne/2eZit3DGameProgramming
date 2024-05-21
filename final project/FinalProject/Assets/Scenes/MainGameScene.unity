@@ -388,8 +388,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f8643230314234894d611f0f111565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textElement: {fileID: 1836527873}
-  message: PMD
+  textElement: {fileID: 1305285800}
+  message: 'PMD
+
+
+    You can only put things like plastic, metal and drink cartons
+    in this bin.'
 --- !u!65 &400110580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1456,8 +1460,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f8643230314234894d611f0f111565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textElement: {fileID: 1836527873}
-  message: REST
+  textElement: {fileID: 1305285800}
+  message: 'REST
+
+
+    Everything that does not apply to the other trashcans fits
+    here.'
 --- !u!65 &1374096871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1603,8 +1611,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f8643230314234894d611f0f111565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textElement: {fileID: 1836527873}
-  message: PAPER
+  textElement: {fileID: 1305285800}
+  message: 'PAPER
+
+
+    Only paper and things like cardboard should go into this
+    trashcan.'
 --- !u!65 &1629518489
 BoxCollider:
   m_ObjectHideFlags: 0
