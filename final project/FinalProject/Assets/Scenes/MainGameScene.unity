@@ -388,6 +388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f8643230314234894d611f0f111565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textElement: {fileID: 1836527873}
+  message: PMD
 --- !u!65 &400110580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1454,6 +1456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f8643230314234894d611f0f111565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textElement: {fileID: 1836527873}
+  message: REST
 --- !u!65 &1374096871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1599,6 +1603,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f8643230314234894d611f0f111565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textElement: {fileID: 1836527873}
+  message: PAPER
 --- !u!65 &1629518489
 BoxCollider:
   m_ObjectHideFlags: 0
