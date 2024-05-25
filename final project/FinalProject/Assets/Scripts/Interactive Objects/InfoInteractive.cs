@@ -12,6 +12,7 @@ public class InfoInteractable : MonoBehaviour
     public void OnInteract()
     {
         textElement.text = message;
+        Debug.Log(textElement.text);
         CurrentlyShowingMessage = true;
     }
     public void Update()

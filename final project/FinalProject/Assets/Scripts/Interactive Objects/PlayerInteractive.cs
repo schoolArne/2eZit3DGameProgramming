@@ -22,6 +22,7 @@ public class PlayerInteractive : MonoBehaviour
                     InfoInteractable infoInteractable = hit.collider.GetComponent<InfoInteractable>();
                     if (infoInteractable != null)
                     {
+                        Debug.Log("interact");
                         infoInteractable.OnInteract();
                     }
                 }
