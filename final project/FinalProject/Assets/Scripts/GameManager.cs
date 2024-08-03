@@ -41,4 +41,8 @@ public class GameManager : MonoBehaviour
             ammoText.text = currentAmmoAtTheMoment.ToString() + "/" + maxAmmo.ToString();
         }
     }
+    public int GetCurrentAmmo()
+    {
+        return currentAmmo;
+    }
 }

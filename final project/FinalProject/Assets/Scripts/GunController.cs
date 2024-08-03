@@ -25,26 +25,29 @@ public class GunController : MonoBehaviour
 
     void Shoot()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, shootingRange))
+        if(gameManager.GetCurrentAmmo() != 0)
         {
-            Debug.Log(hit.transform.name);
-
-            // Show impact effect
-            if (impactEffect != null)
+            RaycastHit hit;
+            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, shootingRange))
             {
-                Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            }
+                Debug.Log(hit.transform.name);
 
-            // Visualize the raycast
-            StartCoroutine(ShowShotEffect(hit.point));
+                // Show impact effect
+                if (impactEffect != null)
+                {
+                    Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                }
+
+                // Visualize the raycast
+                StartCoroutine(ShowShotEffect(hit.point));
+            }
+            else
+            {
+                // Visualize the raycast even if it doesn't hit anything
+                StartCoroutine(ShowShotEffect(playerCamera.transform.position + playerCamera.transform.forward * shootingRange));
+            }
+            gameManager.ShootAndDecreaseAmmoCount();
         }
-        else
-        {
-            // Visualize the raycast even if it doesn't hit anything
-            StartCoroutine(ShowShotEffect(playerCamera.transform.position + playerCamera.transform.forward * shootingRange));
-        }
-        gameManager.ShootAndDecreaseAmmoCount();
     }
 
     IEnumerator ShowShotEffect(Vector3 hitPoint)
