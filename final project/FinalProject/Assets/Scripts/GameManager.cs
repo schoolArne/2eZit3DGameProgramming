@@ -23,7 +23,18 @@ public class GameManager : MonoBehaviour
     {
         UpdateAmmoText(currentAmmo);
     }
-    void UpdateAmmoText(int currentAmmoAtTheMoment)
+    public void ShootAndDecreaseAmmoCount()
+    {
+        if (currentAmmo != 0)
+        {
+            currentAmmo--;
+        }
+    }
+    public void ResetAmmoCount()
+    {
+        currentAmmo = maxAmmo;
+    } 
+    private void UpdateAmmoText(int currentAmmoAtTheMoment)
     {
         if (ammoText != null)
         {
