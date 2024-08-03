@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public int maxAmmo = 50;
-    public int startAmmo = 30;
+    public int startAmmo = 50;
     private int currentAmmo = 0;
     private TMP_Text ammoText;
     void Start()
