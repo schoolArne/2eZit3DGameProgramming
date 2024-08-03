@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class GameManager : MonoBehaviour
+{
+    public int maxAmmo = 50;
+    public int startAmmo = 30;
+    private int currentAmmo = 0;
+    private TMP_Text ammoText;
+    void Start()
+    {
+        currentAmmo = startAmmo;
+        GameObject ammoTextObject = GameObject.Find("AmmoCount");
+        if (ammoTextObject != null)
+        {
+            ammoText = ammoTextObject.GetComponent<TMP_Text>();
+        }        
+    }
+    void Update()
+    {
+        UpdateAmmoText(currentAmmo);
+    }
+    void UpdateAmmoText(int currentAmmoAtTheMoment)
+    {
+        if (ammoText != null)
+        {
+            ammoText.text = currentAmmoAtTheMoment.ToString() + "/" + maxAmmo.ToString();
+        }
+    }
+}
