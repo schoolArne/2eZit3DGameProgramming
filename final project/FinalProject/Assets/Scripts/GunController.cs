@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class GunController : MonoBehaviour
 {
-    public Camera playerCamera;   // Reference to the player's camera
-    public float shootingRange = 100f;   // The range of the raycast
-    public GameObject impactEffect;   // Prefab for the impact effect
-    public LineRenderer lineRenderer;   // LineRenderer for the visible raycast
+    public Camera playerCamera;
+    public float shootingRange = 100f;
+    public GameObject impactEffect;
+    public LineRenderer lineRenderer;
     public GameManager gameManager;
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))   // "Fire1" is the default left mouse button
+        if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
@@ -32,18 +32,15 @@ public class GunController : MonoBehaviour
             {
                 Debug.Log(hit.transform.name);
 
-                // Show impact effect
                 if (impactEffect != null)
                 {
                     Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
                 }
 
-                // Visualize the raycast
                 StartCoroutine(ShowShotEffect(hit.point));
             }
             else
             {
-                // Visualize the raycast even if it doesn't hit anything
                 StartCoroutine(ShowShotEffect(playerCamera.transform.position + playerCamera.transform.forward * shootingRange));
             }
             gameManager.ShootAndDecreaseAmmoCount();
@@ -57,7 +54,6 @@ public class GunController : MonoBehaviour
 
         lineRenderer.enabled = true;
 
-        // Wait for a short time
         yield return new WaitForSeconds(0.1f);
 
         lineRenderer.enabled = false;
