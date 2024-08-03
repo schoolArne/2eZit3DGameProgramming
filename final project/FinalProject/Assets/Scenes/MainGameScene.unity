@@ -253,6 +253,7 @@ MonoBehaviour:
   shootingRange: 100
   impactEffect: {fileID: 0}
   lineRenderer: {fileID: 19866326}
+  gameManager: {fileID: 1925140910}
 --- !u!1001 &43796887
 PrefabInstance:
   m_ObjectHideFlags: 0
