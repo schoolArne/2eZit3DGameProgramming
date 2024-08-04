@@ -6780,7 +6780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAmmo: 50
-  startAmmo: 30
+  startAmmo: 50
 --- !u!4 &1925140911
 Transform:
   m_ObjectHideFlags: 0
