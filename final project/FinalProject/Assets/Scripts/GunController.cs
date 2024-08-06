@@ -11,6 +11,13 @@ public class GunController : MonoBehaviour
     public LineRenderer lineRenderer;
     public GameManager gameManager;
 
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -27,6 +34,10 @@ public class GunController : MonoBehaviour
     {
         if(gameManager.GetCurrentAmmo() != 0)
         {
+            if(audioSource != null)
+            {
+                audioSource.Play();
+            }
             RaycastHit hit;
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, shootingRange))
             {
