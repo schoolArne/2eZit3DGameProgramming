@@ -32,9 +32,9 @@ public class GunController : MonoBehaviour
 
     void Shoot()
     {
-        if(gameManager.GetCurrentAmmo() != 0)
+        if (gameManager.GetCurrentAmmo() != 0)
         {
-            if(audioSource != null)
+            if (audioSource != null)
             {
                 audioSource.Play();
             }
@@ -47,26 +47,18 @@ public class GunController : MonoBehaviour
                 {
                     Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
                 }
-
-                StartCoroutine(ShowShotEffect(hit.point));
+                StartCoroutine(ShowShotEffect());
             }
             else
             {
-                StartCoroutine(ShowShotEffect(playerCamera.transform.position + playerCamera.transform.forward * shootingRange));
+                StartCoroutine(ShowShotEffect());
             }
             gameManager.ShootAndDecreaseAmmoCount();
         }
     }
 
-    IEnumerator ShowShotEffect(Vector3 hitPoint)
+    IEnumerator ShowShotEffect()
     {
-        lineRenderer.SetPosition(0, transform.position);
-        lineRenderer.SetPosition(1, hitPoint);
-
-        lineRenderer.enabled = true;
-
-        yield return new WaitForSeconds(0.1f);
-
-        lineRenderer.enabled = false;
+        yield return null;
     }
 }
