@@ -52,6 +52,11 @@ public class GunController : MonoBehaviour
                     {
                         Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
                     }
+                    TrashDyingScript dyingScript = hit.transform.GetComponent<TrashDyingScript>();
+                    if (dyingScript != null)
+                    {
+                        dyingScript.Die();
+                    }
                 }                
             }
             ShowMuzzleFlash();
