@@ -360,6 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 35034086}
   - component: {fileID: 35034087}
+  - component: {fileID: 35034088}
   m_Layer: 0
   m_Name: SpawnerRight
   m_TagString: Untagged
@@ -403,6 +404,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &35034088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35034085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b7b066e7cb43c4fb70a856214d10b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Trash1: {fileID: 7883751235053263232, guid: d68cadb05a5abfc4da2e558daba32582, type: 3}
+  Trash2: {fileID: 1307290408963656513, guid: f48bec6eba022ba46a10cbf3007bc09e, type: 3}
+  Trash3: {fileID: 4307009551937291224, guid: 720277060ba32af42880fba7ba247ab1, type: 3}
+  minimumSpawnTime: 1
+  maximumSpawnTime: 5
 --- !u!1001 &43796887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -532,6 +550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 80127566}
   - component: {fileID: 80127567}
+  - component: {fileID: 80127568}
   m_Layer: 0
   m_Name: SpawnerLeft
   m_TagString: Untagged
@@ -575,6 +594,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &80127568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80127565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b7b066e7cb43c4fb70a856214d10b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Trash1: {fileID: 7883751235053263232, guid: d68cadb05a5abfc4da2e558daba32582, type: 3}
+  Trash2: {fileID: 1307290408963656513, guid: f48bec6eba022ba46a10cbf3007bc09e, type: 3}
+  Trash3: {fileID: 4307009551937291224, guid: 720277060ba32af42880fba7ba247ab1, type: 3}
+  minimumSpawnTime: 1
+  maximumSpawnTime: 5
 --- !u!1 &80152077
 GameObject:
   m_ObjectHideFlags: 0
@@ -4340,6 +4376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1117213662}
   - component: {fileID: 1117213663}
+  - component: {fileID: 1117213664}
   m_Layer: 0
   m_Name: SpawnerCenter
   m_TagString: Untagged
@@ -4383,6 +4420,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1117213664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117213661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b7b066e7cb43c4fb70a856214d10b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Trash1: {fileID: 7883751235053263232, guid: d68cadb05a5abfc4da2e558daba32582, type: 3}
+  Trash2: {fileID: 1307290408963656513, guid: f48bec6eba022ba46a10cbf3007bc09e, type: 3}
+  Trash3: {fileID: 4307009551937291224, guid: 720277060ba32af42880fba7ba247ab1, type: 3}
+  minimumSpawnTime: 1
+  maximumSpawnTime: 5
 --- !u!1001 &1126165106
 PrefabInstance:
   m_ObjectHideFlags: 0
