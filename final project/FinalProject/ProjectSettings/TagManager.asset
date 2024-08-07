@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SkyboxCamera
   - Interactable
+  - enemy
   layers:
   - Default
   - TransparentFX
