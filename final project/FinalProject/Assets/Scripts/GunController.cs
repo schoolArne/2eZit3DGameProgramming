@@ -45,12 +45,14 @@ public class GunController : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, shootingRange))
             {
-                Debug.Log(hit.transform.name);
-
-                if (impactEffect != null)
+                if(transform.tag == "enemy")
                 {
-                    Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                }
+                    Debug.Log(hit.transform.name);
+                    if (impactEffect != null)
+                    {
+                        Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                    }
+                }                
             }
             ShowMuzzleFlash();
             gameManager.ShootAndDecreaseAmmoCount();
