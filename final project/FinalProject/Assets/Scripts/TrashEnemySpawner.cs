@@ -17,4 +17,19 @@ public class TrashEnemySpawner : MonoBehaviour
     {
         
     }
+    void SpawnEnemy()
+    {
+
+    }
+    GameObject ChooseRandomEnemy()
+    {
+        List<GameObject> enemies = new List<GameObject> { Trash1, Trash2, Trash3 };
+        enemies.RemoveAll(enemy => enemy == null);
+        if (enemies.Count == 0)
+        {
+            return null;
+        }
+        int randomIndex = Random.Range(0, enemies.Count);
+        return enemies[randomIndex];
+    }
 }
