@@ -52,7 +52,22 @@ public class GunController : MonoBehaviour
                     Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
                 }
             }
+            ShowMuzzleFlash();
             gameManager.ShootAndDecreaseAmmoCount();
         }
+    }
+    void ShowMuzzleFlash()
+    {
+        if (muzzleFlash != null)
+        {
+            muzzleFlash.SetActive(true);
+            StartCoroutine(HideMuzzleFlash());
+        }
+    }
+
+    IEnumerator HideMuzzleFlash()
+    {
+        yield return new WaitForSeconds(0.1f); // Adjust duration as needed
+        muzzleFlash.SetActive(false);
     }
 }
