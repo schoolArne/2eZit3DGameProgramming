@@ -419,8 +419,8 @@ MonoBehaviour:
   Trash1: {fileID: 7883751235053263232, guid: d68cadb05a5abfc4da2e558daba32582, type: 3}
   Trash2: {fileID: 1307290408963656513, guid: f48bec6eba022ba46a10cbf3007bc09e, type: 3}
   Trash3: {fileID: 4307009551937291224, guid: 720277060ba32af42880fba7ba247ab1, type: 3}
-  minimumSpawnTime: 1
-  maximumSpawnTime: 5
+  minimumSpawnTime: 3
+  maximumSpawnTime: 10
 --- !u!1001 &43796887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -609,8 +609,8 @@ MonoBehaviour:
   Trash1: {fileID: 7883751235053263232, guid: d68cadb05a5abfc4da2e558daba32582, type: 3}
   Trash2: {fileID: 1307290408963656513, guid: f48bec6eba022ba46a10cbf3007bc09e, type: 3}
   Trash3: {fileID: 4307009551937291224, guid: 720277060ba32af42880fba7ba247ab1, type: 3}
-  minimumSpawnTime: 1
-  maximumSpawnTime: 5
+  minimumSpawnTime: 3
+  maximumSpawnTime: 10
 --- !u!1 &80152077
 GameObject:
   m_ObjectHideFlags: 0
@@ -4435,8 +4435,8 @@ MonoBehaviour:
   Trash1: {fileID: 7883751235053263232, guid: d68cadb05a5abfc4da2e558daba32582, type: 3}
   Trash2: {fileID: 1307290408963656513, guid: f48bec6eba022ba46a10cbf3007bc09e, type: 3}
   Trash3: {fileID: 4307009551937291224, guid: 720277060ba32af42880fba7ba247ab1, type: 3}
-  minimumSpawnTime: 1
-  maximumSpawnTime: 5
+  minimumSpawnTime: 3
+  maximumSpawnTime: 10
 --- !u!1001 &1126165106
 PrefabInstance:
   m_ObjectHideFlags: 0

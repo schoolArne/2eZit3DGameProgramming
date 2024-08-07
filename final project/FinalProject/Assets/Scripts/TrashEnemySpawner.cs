@@ -7,8 +7,8 @@ public class TrashEnemySpawner : MonoBehaviour
     public GameObject Trash1;
     public GameObject Trash2;
     public GameObject Trash3;
-    public float minimumSpawnTime = 1f;
-    public float maximumSpawnTime = 5f;
+    public float minimumSpawnTime = 3f;
+    public float maximumSpawnTime = 10f;
     void Start()
     {
         StartCoroutine(SpawnEnemyAtRandomIntervals());
