@@ -252,7 +252,7 @@ MonoBehaviour:
   playerCamera: {fileID: 963194227}
   shootingRange: 100
   impactEffect: {fileID: 0}
-  muzzleFlash: {fileID: 0}
+  muzzleFlash: {fileID: 1506203612}
   gameManager: {fileID: 1925140910}
 --- !u!82 &19866328
 AudioSource:
@@ -5748,6 +5748,11 @@ PrefabInstance:
 --- !u!4 &1506203611 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471318, guid: 51b76f616384d4946bed4ecc9a6c2c3e, type: 3}
+  m_PrefabInstance: {fileID: 1506203610}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1506203612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 199458, guid: 51b76f616384d4946bed4ecc9a6c2c3e, type: 3}
   m_PrefabInstance: {fileID: 1506203610}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1544799853

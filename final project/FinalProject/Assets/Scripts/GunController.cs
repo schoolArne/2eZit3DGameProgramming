@@ -8,7 +8,7 @@ public class GunController : MonoBehaviour
     public Camera playerCamera;
     public float shootingRange = 100f;
     public GameObject impactEffect;
-    public LineRenderer lineRenderer;
+    public GameObject muzzleFlash;
     public GameManager gameManager;
 
     private AudioSource audioSource;
@@ -16,6 +16,10 @@ public class GunController : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        if (muzzleFlash != null)
+        {
+            muzzleFlash.SetActive(false);
+        }
     }
 
     void Update()
@@ -47,18 +51,8 @@ public class GunController : MonoBehaviour
                 {
                     Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
                 }
-                StartCoroutine(ShowShotEffect());
-            }
-            else
-            {
-                StartCoroutine(ShowShotEffect());
             }
             gameManager.ShootAndDecreaseAmmoCount();
         }
-    }
-
-    IEnumerator ShowShotEffect()
-    {
-        yield return null;
     }
 }
