@@ -45,7 +45,7 @@ public class GunController : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, shootingRange))
             {
-                if(transform.tag == "enemy")
+                if(hit.transform.tag == "enemy")
                 {
                     Debug.Log(hit.transform.name);
                     if (impactEffect != null)
