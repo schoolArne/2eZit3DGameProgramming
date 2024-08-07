@@ -7,22 +7,31 @@ public class TrashEnemySpawner : MonoBehaviour
     public GameObject Trash1;
     public GameObject Trash2;
     public GameObject Trash3;
+    public float minimumSpawnTime = 1f;
+    public float maximumSpawnTime = 5f;
     void Start()
     {
-        
+        StartCoroutine(SpawnEnemyAtRandomIntervals());
     }
-
-    // Update is called once per frame
     void Update()
     {
         
+    }
+    IEnumerator SpawnEnemyAtRandomIntervals()
+    {
+        while (true)
+        {
+            float waitTime = Random.Range(minimumSpawnTime, maximumSpawnTime);
+            yield return new WaitForSeconds(waitTime);
+            SpawnEnemy();
+        }
     }
     void SpawnEnemy()
     {
         GameObject enemyToSpawn = ChooseRandomEnemy();
         if (enemyToSpawn != null)
         {
-            //spawn
+            Instantiate(enemyToSpawn, transform.position, transform.rotation);
         }
     }
     GameObject ChooseRandomEnemy()
