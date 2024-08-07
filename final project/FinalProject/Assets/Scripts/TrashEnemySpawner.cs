@@ -19,7 +19,11 @@ public class TrashEnemySpawner : MonoBehaviour
     }
     void SpawnEnemy()
     {
-
+        GameObject enemyToSpawn = ChooseRandomEnemy();
+        if (enemyToSpawn != null)
+        {
+            //spawn
+        }
     }
     GameObject ChooseRandomEnemy()
     {
