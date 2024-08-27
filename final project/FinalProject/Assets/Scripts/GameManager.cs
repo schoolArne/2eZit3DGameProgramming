@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int startAmmo = 50;
     private int currentAmmo = 0;
     private TMP_Text ammoText;
+    private Dictionary<string, int> trashInventory = new Dictionary<string, int>();    
     void Start()
     {
         currentAmmo = startAmmo;
@@ -17,7 +18,10 @@ public class GameManager : MonoBehaviour
         if (ammoTextObject != null)
         {
             ammoText = ammoTextObject.GetComponent<TMP_Text>();
-        }        
+        }
+        trashInventory["PAPER"] = 0;
+        trashInventory["REST"] = 0;
+        trashInventory["PMD"] = 0;
     }
     void Update()
     {
@@ -44,5 +48,20 @@ public class GameManager : MonoBehaviour
     public int GetCurrentAmmo()
     {
         return currentAmmo;
+    }
+    public void UpdateTrashInventory(string name, int amount)
+    {
+        if (name == "PAPER" || name == "REST" || name == "PMD")
+        {
+            trashInventory[name] += amount;
+        }
+    }
+    public int GetCurrentAmountOFTrashInInventory(string name)
+    {
+        if (name == "PAPER" || name == "REST" || name == "PMD")
+        {
+            return trashInventory[name];
+        }
+        return 0;
     }
 }
