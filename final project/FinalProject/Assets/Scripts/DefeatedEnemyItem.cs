@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class DefeatedEnemyItem : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private float rotationSpeed = 100f;
+    private float bobbingAmplitude = 0.5f;
+    private float bobbingSpeed = 2f;
+    private float initialY;
     void Start()
     {
-        
+        initialY = transform.position.y;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        Spin();
+        Bob();
+    }
+    void Spin()
+    {
+        transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+    }
+    void Bob()
+    {
+        float newY = initialY + Mathf.Sin(Time.time * bobbingSpeed) * bobbingAmplitude;
+        transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }
 }
