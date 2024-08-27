@@ -139,3 +139,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8162562d28fa9545be5d75f1381e26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplosionGameObject: {fileID: 74078499623404262, guid: 2b10d397707bf9846a719090f36a6395, type: 3}
