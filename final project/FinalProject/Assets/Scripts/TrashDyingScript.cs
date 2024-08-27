@@ -17,7 +17,7 @@ public class TrashDyingScript : MonoBehaviour
     {
         if(ExplosionGameObject != null)
         {
-            Instantiate(ExplosionGameObject, ExplosionGameObject.transform);
+            Instantiate(ExplosionGameObject, transform.position, transform.rotation);
         }
         Destroy(gameObject);
     }
