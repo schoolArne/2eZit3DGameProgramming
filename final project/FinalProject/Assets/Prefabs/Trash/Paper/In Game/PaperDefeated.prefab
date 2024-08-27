@@ -119,3 +119,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a651fe1e9b5e7d47b36ce4e3ea6ad2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctInventoryReference: PAPER
