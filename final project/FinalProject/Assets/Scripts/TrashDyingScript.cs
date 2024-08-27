@@ -22,7 +22,8 @@ public class TrashDyingScript : MonoBehaviour
         }
         if(CorrelatingDeadTrashObject != null)
         {
-            Instantiate(CorrelatingDeadTrashObject, transform.position, transform.rotation);
+            Vector3 newPosition = transform.position + new Vector3(0, 0.5f, 0);
+            Instantiate(CorrelatingDeadTrashObject, newPosition, transform.rotation);
         }
         Destroy(gameObject);
     }
