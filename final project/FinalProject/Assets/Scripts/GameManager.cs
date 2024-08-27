@@ -10,14 +10,20 @@ public class GameManager : MonoBehaviour
     public int startAmmo = 50;
     private int currentAmmo = 0;
     private TMP_Text ammoText;
+    private TMP_Text inventoryText;
     private Dictionary<string, int> trashInventory = new Dictionary<string, int>();    
     void Start()
     {
         currentAmmo = startAmmo;
         GameObject ammoTextObject = GameObject.Find("AmmoCount");
+        GameObject inventoryTextObject = GameObject.Find("TrashInventoryInfo");
         if (ammoTextObject != null)
         {
             ammoText = ammoTextObject.GetComponent<TMP_Text>();
+        }
+        if (ammoTextObject != null)
+        {
+            inventoryText = inventoryTextObject.GetComponent<TMP_Text>();
         }
         trashInventory["PAPER"] = 0;
         trashInventory["REST"] = 0;
@@ -26,6 +32,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         UpdateAmmoText(currentAmmo);
+        UpdateInventoryText();
     }
     public void ShootAndDecreaseAmmoCount()
     {
@@ -63,5 +70,12 @@ public class GameManager : MonoBehaviour
             return trashInventory[name];
         }
         return 0;
+    }
+    private void UpdateInventoryText()
+    {
+        if (inventoryText != null)
+        {
+            inventoryText.text = "REST: " + trashInventory["REST"] + "\n" + "PAPER: " + trashInventory["PAPER"] + "\n" + "PMD: " + trashInventory["PMD"];
+        }
     }
 }
