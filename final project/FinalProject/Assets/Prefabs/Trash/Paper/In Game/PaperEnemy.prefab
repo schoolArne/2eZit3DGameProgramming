@@ -140,3 +140,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionGameObject: {fileID: 74078499623404262, guid: 2b10d397707bf9846a719090f36a6395, type: 3}
+  CorrelatingDeadTrashObject: {fileID: 8556593904786686268, guid: 21a591c6c7fb577468fe757dc52b3d10, type: 3}
