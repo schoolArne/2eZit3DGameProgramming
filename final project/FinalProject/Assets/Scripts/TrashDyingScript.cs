@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TrashDyingScript : MonoBehaviour
 {
+    public GameObject ExplosionGameObject;
     void Start()
     {
         
@@ -14,6 +15,10 @@ public class TrashDyingScript : MonoBehaviour
     }
     public void Die()
     {
+        if(ExplosionGameObject != null)
+        {
+            Instantiate(ExplosionGameObject, ExplosionGameObject.transform);
+        }
         Destroy(gameObject);
     }
 }
