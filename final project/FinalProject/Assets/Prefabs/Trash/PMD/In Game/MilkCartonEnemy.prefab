@@ -134,4 +134,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionGameObject: {fileID: 74078499623404262, guid: 2b10d397707bf9846a719090f36a6395, type: 3}
+  ExplosionOnImpactWithWrongTrashCanObject: {fileID: 3548588485384254792, guid: 19aec6c719ea3f54e9600643ce26c42c, type: 3}
   CorrelatingDeadTrashObject: {fileID: 1892740567365688402, guid: f104fb7c6217e3e40ac110e2566d1950, type: 3}
