@@ -128,6 +128,10 @@ public class GameManager : MonoBehaviour
     }
     private void EndGame()
     {
+        PlayerPrefs.SetInt("trashinwrongtrashbin", trashInWrongTrashBin);
+        PlayerPrefs.SetInt("restpickedup", trashInventory["REST"]);
+        PlayerPrefs.SetInt("pmdpickedup", trashInventory["PMD"]);
+        PlayerPrefs.SetInt("paperpickedup", trashInventory["PAPER"]);
         SceneManager.LoadScene("EndScene");
     }
 }
