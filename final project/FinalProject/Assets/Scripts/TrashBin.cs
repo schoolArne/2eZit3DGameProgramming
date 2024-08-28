@@ -17,6 +17,11 @@ public class TrashBin : MonoBehaviour
     {
         if (other.CompareTag("enemy"))
         {
+            TrashDyingScript enemyScript = other.GetComponent<TrashDyingScript>();
+            if(enemyScript != null)
+            {
+                enemyScript.DieOnImpactWithWrongTrashCan();
+            }
             if (gameManager != null)
             {
                 gameManager.TrashWentIntoWrongTrashBin();
