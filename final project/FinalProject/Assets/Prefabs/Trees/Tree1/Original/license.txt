@@ -1,0 +1,11 @@
+Model Information:
+* title:	Scary tree
+* source:	https://sketchfab.com/3d-models/scary-tree-1b5f9f18df7f42ddbd2b00c076d31229
+* author:	bvoz (https://sketchfab.com/bvoz)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Scary tree" (https://sketchfab.com/3d-models/scary-tree-1b5f9f18df7f42ddbd2b00c076d31229) by bvoz (https://sketchfab.com/bvoz) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
