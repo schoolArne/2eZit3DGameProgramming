@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class GameManagerEndScene : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        int trashInWrongTrashBin = PlayerPrefs.GetInt("trashinwrongtrashbin", 0);
+        int restpickedup = PlayerPrefs.GetInt("restpickedup", 0);
+        int pmdpickedup = PlayerPrefs.GetInt("pmdpickedup", 0);
+        int paperpickedup = PlayerPrefs.GetInt("paperpickedup", 0);
+        Debug.Log(trashInWrongTrashBin + " " + restpickedup + " " + pmdpickedup + " " + paperpickedup);
     }
 }
