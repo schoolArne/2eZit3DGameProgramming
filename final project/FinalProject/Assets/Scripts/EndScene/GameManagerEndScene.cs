@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManagerEndScene : MonoBehaviour
 {
@@ -19,5 +20,14 @@ public class GameManagerEndScene : MonoBehaviour
             scoreText = scoreTextObject.GetComponent<TMP_Text>();
             scoreText.text = "Trash that went into wrong trashbin: " + trashInWrongTrashBin + "\n\n" + "rest picked up: " + restpickedup + "\n" + "pmd picked up: " + pmdpickedup + "\n" + "paper picked up: " + paperpickedup;
         }
+    }
+    public void OnRestartButtonClicked()
+    {
+        Debug.Log("log");
+        PlayerPrefs.SetInt("trashinwrongtrashbin", 0);
+        PlayerPrefs.SetInt("restpickedup", 0);
+        PlayerPrefs.SetInt("pmdpickedup", 0);
+        PlayerPrefs.SetInt("paperpickedup", 0);
+        SceneManager.LoadScene("EndScene");
     }
 }
