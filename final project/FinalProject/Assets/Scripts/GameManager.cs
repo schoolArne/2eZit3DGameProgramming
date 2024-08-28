@@ -12,14 +12,17 @@ public class GameManager : MonoBehaviour
     private TMP_Text ammoText;
     private TMP_Text inventoryText;
     private TMP_Text wrongTrashText;
+    private TMP_Text remainingTimeText;
     private Dictionary<string, int> trashInventory = new Dictionary<string, int>();
     private int trashInWrongTrashBin = 0;
+    private int remainingTime = 20;
     void Start()
     {
         currentAmmo = startAmmo;
         GameObject ammoTextObject = GameObject.Find("AmmoCount");
         GameObject inventoryTextObject = GameObject.Find("TrashInventoryInfo");
         GameObject trashInWrongTrashBinObject = GameObject.Find("WrongTrashInfo");
+        GameObject remainingTimeObject = GameObject.Find("RemainingTime");
         if (ammoTextObject != null)
         {
             ammoText = ammoTextObject.GetComponent<TMP_Text>();
@@ -32,15 +35,25 @@ public class GameManager : MonoBehaviour
         {
             wrongTrashText = trashInWrongTrashBinObject.GetComponent<TMP_Text>();
         }
+        if(remainingTimeObject != null)
+        {
+            remainingTimeText = remainingTimeObject.GetComponent<TMP_Text>();
+        }
         trashInventory["PAPER"] = 0;
         trashInventory["REST"] = 0;
         trashInventory["PMD"] = 0;
     }
     void Update()
     {
+        remainingTime--;
         UpdateAmmoText(currentAmmo);
         UpdateInventoryText();
         UpdateWrongTrashText();
+        UpdateRemainingTime();
+        if(remainingTime == 0)
+        {
+            EndGame();
+        }
     }
     public void ShootAndDecreaseAmmoCount()
     {
@@ -96,5 +109,16 @@ public class GameManager : MonoBehaviour
         {
             wrongTrashText.text = "Trash In Wrong Trashbin: " + trashInWrongTrashBin;
         }
+    }
+    private void UpdateRemainingTime()
+    {
+        if(remainingTimeText != null)
+        {
+            remainingTimeText.text = "REMAINING TIME: " + remainingTime;
+        }
+    }
+    private void EndGame()
+    {
+        Debug.Log("end");
     }
 }

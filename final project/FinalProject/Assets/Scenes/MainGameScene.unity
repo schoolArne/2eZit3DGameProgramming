@@ -7308,7 +7308,7 @@ GameObject:
   - component: {fileID: 1366498956}
   - component: {fileID: 1366498955}
   m_Layer: 5
-  m_Name: AmmoCount (1)
+  m_Name: RemainingTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
