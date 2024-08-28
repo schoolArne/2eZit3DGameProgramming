@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 354327210}
   - component: {fileID: 354327209}
   m_Layer: 5
-  m_Name: Controls
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 1277470972}
   - component: {fileID: 1277470971}
   m_Layer: 5
-  m_Name: ControlsTitle
+  m_Name: ScoreTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
