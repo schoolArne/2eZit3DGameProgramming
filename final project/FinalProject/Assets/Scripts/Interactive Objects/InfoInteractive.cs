@@ -5,23 +5,37 @@ using UnityEngine;
 
 public class InfoInteractable : MonoBehaviour
 {
-    private bool CurrentlyShowingMessage = false;
-    public TMP_Text textElement;
-    [TextArea(3, 20)]
-    public string message = "";
+    private bool currentlyShowingMessage = false;
+    public GameObject textElement;
+
+    private void Start()
+    {
+        if (textElement != null)
+        {
+            textElement.SetActive(false);
+        }
+    }
+
     public void OnInteract()
     {
-        textElement.text = message;
-        CurrentlyShowingMessage = true;
-    }
-    public void Update()
-    {
-        if(CurrentlyShowingMessage)
+        if (textElement != null)
         {
-            if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
+            currentlyShowingMessage = true;
+            textElement.SetActive(true);
+        }
+    }
+
+    private void Update()
+    {
+        if (currentlyShowingMessage)
+        {
+            if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
             {
-                textElement.text = "";
-                CurrentlyShowingMessage = false;
+                if (textElement != null)
+                {
+                    textElement.SetActive(false);
+                }
+                currentlyShowingMessage = false;
             }
         }
     }
