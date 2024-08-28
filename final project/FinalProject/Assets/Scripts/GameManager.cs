@@ -78,4 +78,8 @@ public class GameManager : MonoBehaviour
             inventoryText.text = "REST: " + trashInventory["REST"] + "\n" + "PAPER: " + trashInventory["PAPER"] + "\n" + "PMD: " + trashInventory["PMD"];
         }
     }
+    public void TrashWentIntoWrongTrashBin()
+    {
+        Debug.Log("Trash went into wrong trashbin");
+    }
 }
