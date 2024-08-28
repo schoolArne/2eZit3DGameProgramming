@@ -5,6 +5,7 @@ using UnityEngine;
 public class TrashDyingScript : MonoBehaviour
 {
     public GameObject ExplosionGameObject;
+    public GameObject ExplosionOnImpactWithWrongTrashCanObject;
     public GameObject CorrelatingDeadTrashObject;
     void Start()
     {
@@ -24,6 +25,14 @@ public class TrashDyingScript : MonoBehaviour
         {
             Vector3 newPosition = transform.position + new Vector3(0, 0.5f, 0);
             Instantiate(CorrelatingDeadTrashObject, newPosition, transform.rotation);
+        }
+        Destroy(gameObject);
+    }
+    public void DieOnImpactWithWrongTrashCan()
+    {
+        if (ExplosionOnImpactWithWrongTrashCanObject != null)
+        {
+            Instantiate(ExplosionOnImpactWithWrongTrashCanObject, transform.position, transform.rotation);
         }
         Destroy(gameObject);
     }
