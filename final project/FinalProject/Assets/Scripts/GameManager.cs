@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     private TMP_Text remainingTimeText;
     private Dictionary<string, int> trashInventory = new Dictionary<string, int>();
     private int trashInWrongTrashBin = 0;
-    private int remainingTime = 20;
+    private int remainingTime = 100;
     private float timeSinceLastTick = 0f;
     private float tickRate = 1f;
     void Start()
