@@ -2,6 +2,8 @@
 
 Trash target is a game that teaches the correct way to recycle common trash items trough a horror / fps style gameloop.
 
+## Game design
+
 ## resources used
 
 - Shot,scifi,powerdown,buildShort,highs.wav by CJDeets -- https://freesound.org/s/476741/ -- License: Attribution 4.0
