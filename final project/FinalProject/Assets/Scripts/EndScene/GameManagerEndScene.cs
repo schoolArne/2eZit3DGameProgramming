@@ -28,6 +28,6 @@ public class GameManagerEndScene : MonoBehaviour
         PlayerPrefs.SetInt("restpickedup", 0);
         PlayerPrefs.SetInt("pmdpickedup", 0);
         PlayerPrefs.SetInt("paperpickedup", 0);
-        SceneManager.LoadScene("EndScene");
+        SceneManager.LoadScene("StartScene");
     }
 }
