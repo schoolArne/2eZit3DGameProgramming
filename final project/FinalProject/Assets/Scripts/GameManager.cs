@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     private Dictionary<string, int> trashInventory = new Dictionary<string, int>();
     private int trashInWrongTrashBin = 0;
     private int remainingTime = 20;
+    private float timeSinceLastTick = 0f;
+    private float tickRate = 1f;
     void Start()
     {
         currentAmmo = startAmmo;
@@ -45,15 +47,21 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        remainingTime--;
+        timeSinceLastTick += Time.deltaTime;
+        if (timeSinceLastTick >= tickRate)
+        {
+            remainingTime--;
+            timeSinceLastTick = 0f;
+            if (remainingTime <= 0)
+            {
+                EndGame();
+                remainingTime = 0;
+            }
+        }
         UpdateAmmoText(currentAmmo);
         UpdateInventoryText();
         UpdateWrongTrashText();
         UpdateRemainingTime();
-        if(remainingTime == 0)
-        {
-            EndGame();
-        }
     }
     public void ShootAndDecreaseAmmoCount()
     {
