@@ -9,6 +9,9 @@ public class GameManagerEndScene : MonoBehaviour
     private TMP_Text scoreText;
     void Start()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         int trashInWrongTrashBin = PlayerPrefs.GetInt("trashinwrongtrashbin", 0);
         int restpickedup = PlayerPrefs.GetInt("restpickedup", 0);
         int pmdpickedup = PlayerPrefs.GetInt("pmdpickedup", 0);
